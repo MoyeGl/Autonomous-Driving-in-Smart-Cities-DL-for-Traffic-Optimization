@@ -1,64 +1,54 @@
-# =============================================================================
-# data_loader.py
-# Author: Moye Nyuysoni
-# Purpose: Load and validate highD dataset files
-# =============================================================================
+"""
+data_loader.py
+Author: Moye Nyuysoni
+Load HighD recordings Data
+"""
 
-import os
+from __future__ import annotations
+from dataclasses import dataclass
+from pathlib import Path
 import pandas as pd
+import numpy as np
 
-class HighDLoader:
 
-    def __init__(self, dataset_path):
+@dataclass
+class HighDAll:
+    tracks: pd.DataFrame
+    recording_meta: pd.DataFrame
+    fps: float
 
-        self.dataset_path = dataset_path
 
-        # Initialize containers for data
-        self.tracks = None
-        self.tracks_meta = None
-        self.recording_meta = None
+def load_all_highd(data_root: str | Path, n_recordings: int = 60) -> HighDAll:
+    root = Path(data_root)
 
-    def _file_path(self, filename):
+    usecols = [
+        "frame", "id", "x", "laneId",
+        "xVelocity", "xAcceleration",
+        "dhw", "precedingXVelocity"
+    ]
 
-        return os.path.join(self.dataset_path, filename)
+    tracks_list = []
+    rec_meta_list = []
 
-    def load_data(self, recording_id=1):
+    for rec in range(1, n_recordings + 1):
+        r = f"{rec:02d}"
+        tracks_path = root / f"{r}_tracks.csv"
+        rec_meta_path = root / f"{r}_recordingMeta.csv"
 
-        rec_id = str(recording_id).zfill(2)
+        if not tracks_path.exists() or not rec_meta_path.exists():
+            continue
 
-        tracks_file = f"{rec_id}_tracks.csv"
-        tracks_meta_file = f"{rec_id}_tracksMeta.csv"
-        recording_meta_file = f"{rec_id}_recordingMeta.csv"
+        rm = pd.read_csv(rec_meta_path)
+        rm["rec"] = rec
+        rec_meta_list.append(rm)
 
-        print(f"Loading data for recording {rec_id}...")
+        df = pd.read_csv(tracks_path, usecols=lambda c: c in usecols)
+        df["rec"] = rec
+        df["id"] = (df["rec"].astype(np.int64) * 1_000_000 + df["id"].astype(np.int64)).astype(np.int64)
+        tracks_list.append(df)
 
-        # Validate and load each file
-        self.tracks = self._load_csv(tracks_file)
-        self.tracks_meta = self._load_csv(tracks_meta_file)
-        self.recording_meta = self._load_csv(recording_meta_file)
+    tracks = pd.concat(tracks_list, ignore_index=True)
+    recording_meta = pd.concat(rec_meta_list, ignore_index=True)
 
-        print("Data successfully loaded!")
-        return self.tracks, self.tracks_meta, self.recording_meta
-
-    def _load_csv(self, filename):
-
-        file_path = self._file_path(filename)
-        if not os.path.exists(file_path):
-            raise FileNotFoundError(f"ERROR: File not found -> {file_path}")
-
-        print(f"Loading file: {file_path}")
-        return pd.read_csv(file_path)
-
-    def show_summary(self):
-
-        print("\n===== DATA SUMMARY =====")
-        if self.tracks is not None:
-            print(f"Tracks: {len(self.tracks)} rows, {len(self.tracks.columns)} columns")
-            print(self.tracks.head())
-        if self.tracks_meta is not None:
-            print(f"\nTracks Meta: {len(self.tracks_meta)} rows, {len(self.tracks_meta.columns)} columns")
-            print(self.tracks_meta.head())
-        if self.recording_meta is not None:
-            print(f"\nRecording Meta Info:")
-            print(self.recording_meta.head())
-        print("========================\n")
+    fps = float(np.median(recording_meta["frameRate"].values)) if "frameRate" in recording_meta.columns else 25.0
+    return HighDAll(tracks=tracks, recording_meta=recording_meta, fps=fps)
