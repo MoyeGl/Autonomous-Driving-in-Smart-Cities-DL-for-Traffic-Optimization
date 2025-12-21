@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="ZmPhuaJnZV7BjYm_yqrk">
+    <mxGraphModel dx="1034" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-6" parent="1" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="400" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-7" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-6" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=light-dark(#FF0000,#FFFFFF);rounded=0;" target="_AbZBdOsdwK8l4aQN32n-22" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-29" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&#xa;Load vehicle trajectories (HighD)&#xa;&#xa;" vertex="1">
+          <mxGeometry height="50" width="158" x="336" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-30" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="415" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Aggregate lane–segment states" vertex="1">
+          <mxGeometry height="40" width="158" x="336" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-39" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Load Trained&amp;nbsp;&lt;div&gt;Model&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="158" x="680" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-33" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Split into train set and validation set" vertex="1">
+          <mxGeometry height="40" width="158" x="336" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-46" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Generate metrics, results &amp;amp; plots" vertex="1">
+          <mxGeometry height="40" width="158" x="522" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-27" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-19" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Trained&amp;nbsp;&lt;div&gt;Model?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="95" x="367.5" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-23" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Initialization&amp;nbsp;" vertex="1">
+          <mxGeometry height="40" width="137.5" x="346.25" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-24" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.58;entryY=-0.01;entryDx=0;entryDy=0;entryPerimeter=0;" target="_AbZBdOsdwK8l4aQN32n-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="550" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-35" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_AbZBdOsdwK8l4aQN32n-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Train multi-task LSTM" vertex="1">
+          <mxGeometry height="40" width="158" x="336" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-36" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Save trained model" vertex="1">
+          <mxGeometry height="40" width="158" x="336" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-41" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="_AbZBdOsdwK8l4aQN32n-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Run closed-loop evaluation" vertex="1">
+          <mxGeometry height="40" width="158" x="522" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-43" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Predict traffic speed and lane-change risk" vertex="1">
+          <mxGeometry height="40" width="158" x="522" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-44" edge="1" parent="1" source="_AbZBdOsdwK8l4aQN32n-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="_AbZBdOsdwK8l4aQN32n-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Compute speed advisory (VSL)" vertex="1">
+          <mxGeometry height="40" width="158" x="522" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="_AbZBdOsdwK8l4aQN32n-45" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="586" y="1410" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
