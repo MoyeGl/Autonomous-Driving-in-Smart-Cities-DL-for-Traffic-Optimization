@@ -1,7 +1,7 @@
 """
 optimizer.py
 Author: Moye Nyuysoni
-Step 3:  speed advisory choice using predicted speed + lane-change risk.
+speed advisory choice using predicted speed + lane-change risk.
 """
 
 from __future__ import annotations
